@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Copy, Check } from 'lucide-react';
+import { LogoIcon } from './LogoIcon';
 
 export const Footer: React.FC = () => {
   const [copied, setCopied] = useState(false);
@@ -17,10 +18,10 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Col 1: Brand */}
           <div className="md:col-span-2 space-y-4">
-            <div className="flex items-center gap-2.5">
+            <div className="flex items-center gap-2.5 group">
               <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center p-0.5">
-                <div className="w-full h-full bg-neutral-950 rounded-[6px] flex items-center justify-center">
-                  <div className="w-3 h-3 border border-cyan-400 rotate-45" />
+                <div className="w-full h-full bg-neutral-950 rounded-[6px] overflow-hidden flex items-center justify-center">
+                  <LogoIcon size={24} className="w-full h-full" />
                 </div>
               </div>
               <span className="text-base font-bold tracking-tight text-white">
